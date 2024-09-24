@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="a05s" fetch="https://github.com/Galaxy-A05s-Development" />
+
+  <!-- device -->
+  <project path="device/samsung/a05s" name="android_device_samsung_a05s" revision="lineage-21" remote="a05s" />
+
+  <!-- hardware -->
+  <remove-project name="hardware/qcom-caf/common" />
+  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" revision="lineage-21.0" remote="a05s" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm6225/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm6225/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm6225/Android.mk" />
+  </project>
+  <project path="hardware/qcom-caf/sm6225/audio/agm" name="android_vendor_qcom_opensource_agm" groups="qcom,divar-audio" revision="lineage-21.0-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/audio/pal" name="android_vendor_qcom_opensource_arpal-lx" groups="qcom,divar-audio" revision="lineage-21.0-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/audio/primary-hal" name="android_hardware_qcom_audio-ar" groups="qcom,divar-audio" revision="lineage-21.0-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,divar-vendor" revision="lineage-21.0-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/dataipa" name="android_vendor_qcom_opensource_dataipa" groups="qcom,divar-vendor" revision="lineage-21.0-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/display" name="android_hardware_qcom_display" groups="qcom" revision="lineage-21.0-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/media" name="android_hardware_qcom_media" groups="qcom,divar-vendor" revision="lineage-21.0-caf-sm6225" />
+
+  <!-- kernel -->
+  <project path="kernel/samsung/sm6225" name="android_kernel_samsung_sm6225" revision="lineage-21" remote="a05s" />
+  <project path="kernel/samsung/sm6225-devicetrees" name="android_kernel_samsung_sm6225-devicetrees" revision="lineage-21" remote="a05s" />
+  <project path="kernel/samsung/sm6225-modules" name="android_kernel_samsung_sm6225-modules" revision="lineage-21" remote="a05s" />
+
+  <!-- vendor -->
+  <project path="vendor/samsung/a05s" name="proprietary_vendor_samsung_a05s" revision="lineage-21" remote="a05s" />
+
+</manifest>
